@@ -15,12 +15,12 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         Args params = new Args();
-        String[] argv = {};
+       
 
         JCommander jc=new JCommander(params);
         try {
             jc.setProgramName("jib-img");
-            jc.parse(argv);
+            jc.parse(args);
 
         } catch (com.beust.jcommander.ParameterException e) {
             System.out.println(e.getMessage());

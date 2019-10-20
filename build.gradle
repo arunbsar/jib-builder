@@ -30,3 +30,15 @@ application {
     // Define the main class for the application
     mainClassName = 'jib.builder.App'
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'jib.builder.App'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+}

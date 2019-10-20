@@ -25,6 +25,27 @@ public class Args {
     @Parameter(names = { "-dst", "--destination-dir" }, description = "where should be the files places by default copies to /")
     private String dst = "/";
 
+    @Parameter(names = { "-t", "--type" }, description = "What type of image docker, registry")
+    private String type = "docker";
+
+    @Parameter(names = { "-user", "--username" }, description = "Username password")
+    private String user;
+
+    @Parameter(names = { "-pass", "--password" }, description = "Username password")
+    private String password;
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getType() {
+        return type;
+    }
+
 
     public List<String> getParameters() {
         return parameters;
