@@ -2,7 +2,9 @@
 
 
 ### How to run
-
+```bash
+./gradlew build
+```
 ```bash
 java -jar build/libs/jib-builder.jar \
 -src helloworld.sh \
