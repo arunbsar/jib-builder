@@ -1,7 +1,19 @@
 # A simple java(Jib) based image builder
 
 
+### How to run
 
+```bash
+java -jar build/libs/jib-builder.jar \
+-src helloworld.sh \
+-from alpine:latest \
+-to arunbsar/jib-test:v1.0 \
+-e /bin/sh \
+-e /helloworld.sh \
+--type registry \
+-user <username> \
+-pass <password> \
+```
 ### TODO
 
 - [ ] Add more options, like ports, env variables

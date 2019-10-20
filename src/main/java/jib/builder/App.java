@@ -15,7 +15,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         Args params = new Args();
-       
+
 
         JCommander jc=new JCommander(params);
         try {
